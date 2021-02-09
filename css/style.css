@@ -15,11 +15,16 @@ font-family: "Tiny Grotesk Narrow";
 src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
 		url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
 }
+
+@font-face {
+font-family: "Tiny Grotesk";
+src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Regular.woff") format("woff"),
+}
   
 } 
 
 li{ 
-font-family: "Tiny Grotesk Narrow", sans-serif;
+font-family: "Tiny Grotesk", sans-serif;
 font-style: normal;
 width: 30em;
 margin-left: 2em; 
@@ -28,8 +33,8 @@ line-height: 1.3em;}
 
 
 p{ 
-font-family: "Tiny Grotesk Narrow", sans-serif;
-width: 30em;
+font-family: "Tiny Grotesk", sans-serif;
+width: 80%;
 margin-left: 2em; 
 margin-bottom: 1.75em;
 font-size: 1.3em;
@@ -37,7 +42,7 @@ line-height: 1.3em;}
 
 blockquote{ 
 font-family: "Tiny Grotesk Narrow", sans-serif;
-width: 30em;
+width: 70%;
 margin-left: 6em; 
 font-size: 1.1em;
 line-height: 1.4em;}
