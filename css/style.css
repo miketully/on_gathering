@@ -12,11 +12,20 @@ margin-left: 15px;
 
 @font-face {
 font-family: "Tiny Grotesk Narrow Regular";
-src: url("/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
-url("/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
+src: 	url("https://filebin.net/wuqokwsl80e1psxc/TinyGrotesk-NarrowRegular.woff") format("woff"),
+		url("https://filebin.net/wuqokwsl80e1psxc/TinyGrotesk-NarrowRegular.otf") format("opentype");
 }
   
 } 
+
+li{ 
+font-family: "Tiny Grotesk Narrow Regular", sans-serif;
+font-style: normal;
+width: 30em;
+margin-left: 2em; 
+font-size: 1.3em;
+line-height: 1.3em;}
+
 
 p{ 
 font-family: "Tiny Grotesk Narrow Regular", sans-serif;
