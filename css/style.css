@@ -20,14 +20,15 @@ url("/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
 
 p{ 
 font-family: "Tiny Grotesk Narrow Regular", sans-serif;
-width: 660px;
+width: 30em;
 margin-left: 2em; 
 margin-bottom: 1.75em;
 font-size: 1.3em;
-line-height: 1.4em;}
+line-height: 1.3em;}
 
 blockquote{ 
 font-family: "Tiny Grotesk Narrow Regular", sans-serif;
-width: 660px;
-margin-left: 4em; 
-font-size: 1.1em;}
+width: 30em;
+margin-left: 6em; 
+font-size: 1.1em;
+line-height: 1.4em;}
