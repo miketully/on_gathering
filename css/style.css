@@ -12,8 +12,8 @@ margin-left: 15px;
 
 @font-face {
 font-family: "Tiny Grotesk Narrow Regular";
-src: 	url("https://filebin.net/wuqokwsl80e1psxc/TinyGrotesk-NarrowRegular.woff") format("woff"),
-		url("https://filebin.net/wuqokwsl80e1psxc/TinyGrotesk-NarrowRegular.otf") format("opentype");
+src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
+		url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
 }
   
 } 
