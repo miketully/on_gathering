@@ -10,13 +10,24 @@ margin-left: 15px;
 
 @media screen and (max-width: 650px) {
 
+@font-face {
+font-family: "Tiny Grotesk Narrow Regular";
+src: url("/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
+url("/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
+}
   
 } 
 
-p{ width: 660px;
+p{ 
+font-family: "Tiny Grotesk Narrow Regular", sans-serif;
+width: 660px;
 margin-left: 2em; 
-font-size: 1.3em;}
+margin-bottom: 1.75em;
+font-size: 1.3em;
+line-height: 1.3em;}
 
-blockquote{ width: 660px;
+blockquote{ 
+font-family: "Tiny Grotesk Narrow Regular", sans-serif;
+width: 660px;
 margin-left: 4em; 
 font-size: 1.1em;}
