@@ -8,7 +8,7 @@ margin-left: 15px;
 /* Mobile
 -------------------------------------------------- */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {}
 
 @font-face {
 font-family: "Tiny Grotesk Narrow";
@@ -38,14 +38,6 @@ line-height: 1.3em;}
 
 p{ 
 font-family: "Tiny Grotesk", sans-serif;
-width: 80%;
-margin-left: 2em; 
-margin-bottom: 1.75em;
-font-size: 1.3em;
-line-height: 1.3em;}
-
-p.collection{ 
-font-family: Arial, helvetica, sans-serif;
 width: 80%;
 margin-left: 2em; 
 margin-bottom: 1.75em;
