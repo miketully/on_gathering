@@ -36,6 +36,14 @@ margin-bottom: 1.75em;
 font-size: 1.6em;
 line-height: 1.3em;}
 
+h2{ 
+font-family: "Tiny Grotesk Narrow", sans-serif;
+margin-left: 1.6em; 
+margin-bottom: 1.75em;
+font-size: 1.6em;
+line-height: 1.3em;
+text-decoration: underline;}
+
 p{ 
 font-family: "Tiny Grotesk", sans-serif;
 width: 80%;
@@ -50,3 +58,17 @@ width: 70%;
 margin-left: 6em; 
 font-size: 1.1em;
 line-height: 1.4em;}
+
+a{ 
+font-family: "Tiny Grotesk", sans-serif;
+font-size: 1em;
+line-height: 1em;
+text-decoration: underline;
+color: black;}
+
+a:hover{ 
+font-family: "Tiny Grotesk", sans-serif;
+font-size: 1em;
+line-height: 1em;
+text-decoration: none;
+color: black;}
