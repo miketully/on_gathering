@@ -17,12 +17,12 @@ src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Narro
 }
 
 @font-face {
-font-family: "Tiny Grotesk Regular";
+font-family: "Tiny Grotesk";
 src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Regular.woff") format("woff"),
 }
 
 li{ 
-font-family: "Tiny Grotesk Regular", sans-serif;
+font-family: "Tiny Grotesk", sans-serif;
 font-style: normal;
 width: 30em;
 margin-left: 2em; 
@@ -37,7 +37,7 @@ font-size: 1.6em;
 line-height: 1.3em;}
 
 p{ 
-font-family: "Tiny Grotesk Regular", sans-serif;
+font-family: "Tiny Grotesk", sans-serif;
 width: 80%;
 margin-left: 2em; 
 margin-bottom: 1.75em;
