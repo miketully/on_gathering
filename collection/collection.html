@@ -18,9 +18,33 @@
 
 
 <body>
+    
+    <br>
+    <h1 class="page-title">P U B L I C L Y &nbsp;&nbsp;S P A C E D &nbsp;&nbsp;: &nbsp;&nbsp;A &nbsp;&nbsp;P r i m e r &nbsp;&nbsp;o n &nbsp;&nbsp;o u r &nbsp;&nbsp;C o m m o n s</h1>
+
+<div class=nav-wrapper>
+    <h1 class="page-subtitle-nav"><a href="index.html">H o m e</a></h1>
+    <h1 class="page-subtitle-nav"><a href="#">C o l l e c t i o n</a></h1>
+    <h1 class="page-subtitle-nav"><a href="reflections.html">R e f l e c t i o n s</a></h1>
+    <h1 class="page-subtitle-nav"><a href="library.html">L i b r a r y</a></h1>
+</div>
+
+    <br><br><br>
+
+    <div class="rotate-wrapper">
+    <div class="rotate-collection">
+
+<iframe style="border:none;" width="600px" height="590" src="https://www.are.na/mike-tully/publicly-spaced/embed" title="Mike Tully’s Are.na channel “Publicly Spaced”"></iframe>
+
+    </div>
+</div>
+
+
+
+
+
+
 </body>
-
-
 
 <script type="module">  
   window.addEventListener("load", () => {
@@ -50,18 +74,10 @@
 
           // Replace the inner html of our document with our own mixture of HTML and channel data
           document.body.innerHTML = `
-
-              <br>
-    <h1 class="page-title">P U B L I C L Y &nbsp;&nbsp;S P A C E D &nbsp;&nbsp;: &nbsp;&nbsp;A &nbsp;&nbsp;P r i m e r &nbsp;&nbsp;o n &nbsp;&nbsp;o u r &nbsp;&nbsp;C o m m o n s</h1>
-
-<div class=nav-wrapper>
-    <h1 class="page-subtitle-nav"><a href="index.html">H o m e</a></h1>
-    <h1 class="page-subtitle-nav"><a href="#">C o l l e c t i o n</a></h1>
-    <h1 class="page-subtitle-nav"><a href="reflections.html">R e f l e c t i o n s</a></h1>
-    <h1 class="page-subtitle-nav"><a href="library.html">L i b r a r y</a></h1>
-</div>
-
-    <br><br><br>
+            <div class="ChannelInfo">
+              <h1>${channel.title}</h1><br>
+              <p class="subtitle">A Primer on Public Space</p>
+            </div>
 
             <div class="ChannelContents">
               ${channel.contents.map((block) => {
