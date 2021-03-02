@@ -1,159 +1,259 @@
+
+
+/* ---   Global Styles + Fonts   --- */
+
 body,
 html {
-background-color: GhostWhite;
-}
-
-
-
-/* Mobile
--------------------------------------------------- */
-
-@media screen and (max-width: 650px) {}
+	background-color: GhostWhite;
+	}
 
 @font-face {
-font-family: "Tiny Grotesk Narrow";
-src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
-		url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");
-}
+	font-family: "Tiny Grotesk Narrow";
+	src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
+			url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");}
 
 @font-face {
-font-family: "Tiny Grotesk";
-src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Regular.woff") format("woff"),
+	font-family: "Tiny Grotesk";
+	src: 	url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Regular.woff") format("woff"),}
+
+
+
+
+/* ---   Mobile   --- */
+
+@media screen and (max-width: 650px) {
+
 }
 
-li{ 
-font-family: "Tiny Grotesk", sans-serif;
-font-style: normal;
-width: 30em;
-margin-left: 2em; 
-font-size: 1.3em;
-line-height: 1.3em;}
+
+
+
+/* ---   Page Title + Nav   --- */
 
 h1{ 
-font-family: "Tiny Grotesk Narrow", sans-serif;
-margin-left: 1.6em; 
-margin-bottom: 1.75em;
-font-size: 1.6em;
-line-height: 1.3em;}
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	margin-left: 1.6em; 
+	margin-bottom: 1.75em;
+	font-size: 1.6em;
+	line-height: 1.3em;}
 
 .page-title { 
-display: block;
-color:rgb(23, 172, 16);
-text-align:center;
-font-weight: bold;
-font-family: "Tiny Grotesk Narrow", sans-serif;
-margin: 1.5em auto 1.5em auto; 
-font-size: 1.6em;
-line-height: 1.3em;}
+	display: block;
+	color:rgb(23, 172, 16);
+	text-align:center;
+	font-weight: bold;
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	margin: 1.5em auto 1.5em auto; 
+	font-size: 1.6em;
+	line-height: 1.3em;}
 
 .nav-wrapper { 
-position: relative;
-margin: 0em auto; 
-text-align:center;}
+	position: relative;
+	margin: 0em auto; 
+	text-align:center;}
 
 .page-subtitle-nav { 
-display: inline-block;
-color:rgb(23, 172, 16);
-padding-left: .75em;
-padding-right: .75em;
-text-align:center;
-font-weight: bold;
-font-family: "Tiny Grotesk Narrow", sans-serif;
-margin: 0 auto 0 auto; 
-font-size: 1.2em;
-line-height: 1em;}
+	display: inline-block;
+	color:rgb(23, 172, 16);
+	padding-left: .75em;
+	padding-right: .75em;
+	text-align:center;
+	font-weight: bold;
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	margin: 0 auto 0 auto; 
+	font-size: 1.2em;
+	line-height: 1em;}
 
 .page-subtitle-nav a { 
-display: block;
-color:rgb(23, 172, 16);
-padding: .5em 1em .5em 1em;
-text-align:center;
-font-weight: bold;
-font-family: "Tiny Grotesk Narrow", sans-serif;
-line-height: 1em;
-text-decoration: none;
-border: 1px dotted rgb(23, 172, 16);
-border-radius:1em;
-transition: .5s;}
+	display: block;
+	color:rgb(23, 172, 16);
+	padding: .5em 1em .5em 1em;
+	text-align:center;
+	font-weight: bold;
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	line-height: 1em;
+	text-decoration: none;
+	border: 1px dotted rgb(23, 172, 16);
+	border-radius:1em;
+	transition: .5s;}
 
 .page-subtitle-nav a:hover{ 
-display: block;
-background-color:rgb(23, 172, 16);
-color:white;
-text-align:center;
-font-weight: bold;
-font-family: "Tiny Grotesk Narrow", sans-serif;
-line-height: 1em; 
-text-decoration: none;
-border: 1px dotted rgb(23, 172, 16);
-border-radius:1em;}
+	display: block;
+	background-color:rgb(23, 172, 16);
+	color:white;
+	text-align:center;
+	font-weight: bold;
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	line-height: 1em; 
+	text-decoration: none;
+	border: 1px dotted rgb(23, 172, 16);
+	border-radius:1em;}
 
 
 
-h2{ 
-font-family: "Tiny Grotesk Narrow", sans-serif;
-color:rgb(23, 172, 16);
-margin-left: 1.6em; 
-font-size: 1.2em;
-font-weight:normal;
-line-height: 1.3em;
-text-decoration: none;}
 
+/* ---   Page Text Styles + Link Styles   --- */
+
+h2 { 
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	color:rgb(23, 172, 16);
+	margin-left: 1.6em; 
+	font-size: 1.2em;
+	font-weight:normal;
+	line-height: 1.3em;
+	text-decoration: none;}
+
+p { 
+	font-family: "Tiny Grotesk", sans-serif;
+	width: 80%;
+	margin-left: 2em; 
+	margin-bottom: 1.75em;
+	font-size: 1.3em;
+	line-height: 1.3em;}
+
+blockquote { 
+	font-family: "Tiny Grotesk Narrow", sans-serif;
+	width: 70%;
+	margin-left: 6em; 
+	font-size: 1.1em;
+	line-height: 1.4em;}
+
+a { 
+	font-family: "Tiny Grotesk", sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	text-decoration: underline;
+	color: DarkSlateGrey;}
+
+a:hover { 
+	font-family: "Tiny Grotesk", sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	text-decoration: underline;
+	color: black;}
+
+
+
+/* ---   Rotate Effect   --- */
 
 .rotate-wrapper{ 
-
-width: 80%;
-margin:0 auto 2em auto;
-perspective: 1000px;
-}
+	width: 80%;
+	margin:0 auto 2em auto;
+	perspective: 1000px;}
 
 .rotate{ 
-margin-bottom: 1.75em;
-transform-style: preserve-3d;
-transform: rotateX(45deg);
-transition: .5s;
-font-family: "Tiny Grotesk", sans-serif;
-font-size: 1.3em;
-line-height: 1.3em;
-color: DarkSlateGrey;}
+	margin-bottom: 1.75em;
+	transform-style: preserve-3d;
+	transform: rotateX(45deg);
+	transition: .5s;
+	font-family: "Tiny Grotesk", sans-serif;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	color: DarkSlateGrey;}
 
 .rotate:hover { 
-  transform-style: preserve-3d;
-  transform: rotateX(0deg);}
+	transform-style: preserve-3d;
+	transform: rotateX(0deg);}
+
+
+
+
+/* ---   Media Styles   --- */
 
 iframe{ 
-display: block;
-margin: 0 auto 2em auto;}
+	display: block;
+	margin: 0 auto 2em auto;}
 
 img{ 
-display: block;
-margin: 0 auto;}
+	display: block;
+	margin: 0 auto;}
 
-p{ 
-font-family: "Tiny Grotesk", sans-serif;
-width: 80%;
-margin-left: 2em; 
-margin-bottom: 1.75em;
-font-size: 1.3em;
-line-height: 1.3em;}
 
-blockquote{ 
-font-family: "Tiny Grotesk Narrow", sans-serif;
-width: 70%;
-margin-left: 6em; 
-font-size: 1.1em;
-line-height: 1.4em;}
 
-a{ 
-font-family: "Tiny Grotesk", sans-serif;
-font-size: 1em;
-line-height: 1em;
-text-decoration: underline;
-color: DarkSlateGrey;}
 
-a:hover{ 
-font-family: "Tiny Grotesk", sans-serif;
-font-size: 1em;
-line-height: 1em;
-text-decoration: underline;
-color: black;}
+/* ---   Are.na API Styles   --- */
+
+
+.ChannelInfo {}
+    
+.subtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: .4em;
+	line-height: 3.75em;
+	letter-spacing: 1em;
+	text-transform: uppercase;
+	z-index:2;}
+    
+.ChannelContents {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 5em;
+	margin: 0 auto;
+	perspective: 1000px;}
+
+.Block {
+	display: flex;
+	margin: 0em auto;
+	max-width: 10em;
+	padding: 1em;}
+
+.Block__title {
+	display: block;
+	padding-bottom: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1.25em;
+	text-transform: uppercase;}
+
+.Block_connected-at {
+	display: block;
+	padding-top: 0.75em;
+	padding-bottom: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.25em;}
+
+.Block_description {
+	display: block;
+	padding-top: 0.75em;
+	padding-bottom: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.25em;}
+
+.BlockInner__Link {
+	display: block;
+	padding-top: 0.75em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1.25em;
+	text-decoration: underline;}
+
+.BlockInner__Text p {
+	margin: 0.5em 0;
+	max-width: 600px;}
+
+.BlockInner__Channel {
+	border: 1px solid green;
+	padding: 1em 0.5em;
+	font-weight: bold;
+	color: green;
+	display: block;
+	text-decoration: none;}
+
+.Block iframe{
+	max-width: 100%;}
+
+
+
+
+
+
