@@ -1,26 +1,146 @@
-<!DOCTYPE html>
-<html >
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8"> 
-    <title>Publicly Spaced – Collection</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="ROBOTS" content="INDEX,FOLLOW">
-    <meta name="description" content="<i>Publicly Spaced: A Primer for our Commons</i> is a collection of materials relating to public spaces for the Yale Spring '21 course On Gathering by Mindy Seu.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
 
-    <script src="//unpkg.com/navigo"></script>
+  <title>Basal</title>
+  <!-- Basal – adj. forming or belonging to a bottom layer or base. -->
+  <!-- 🚨 NOTE 🚨 -->
+  <!-- This is for instructional purposes. -->
+  <!-- While you can technically use this for an actual website, -->
+  <!-- it serves you best as inspiration. -->
+  
+  
+  <!--  This is for routing  -->
+  <script src="//unpkg.com/navigo"></script>
 
+  <!-- Feel free to delete this, just some sane style defaults -->
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  
+  <!-- Styles for our different block types -->
+  <style type="text/css">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:black;
+      color:white;
+    }
 
+    .ChannelInfo {
+      position: fixed;
+      background-color:transparent;
+      padding: 1em;
+      left:4em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: .4em;
+      line-height: 3.75em;
+      letter-spacing: 1.5em;
+      text-transform: uppercase;
+      z-index:2;
+    }
+    
+    .subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: .4em;
+      line-height: 3.75em;
+      letter-spacing: 1em;
+      text-transform: uppercase;
+      z-index:2;
+    }
+    
+    .ChannelContents {
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      perspective: 1000px;
+    }
+  
+    .Block {
+      margin: 4em auto 8em auto;
+      width: 70%;
+      padding: 1em;
+      transform-style: preserve-3d;
+      transform: rotateX(15deg);
+      transition: .5s;
+}
+    
+    .Block:hover {
+      margin: 4em auto 8em auto;
+      width: 70%;
+      padding: 1em;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg);
+}
+    
+
+    .Block__title {
+      display: block;
+      padding-bottom: 0.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 2em;
+      line-height: 1.25em;
+      text-transform: uppercase;
+    }
+    
+    .Block_connected-at {
+      display: block;
+      padding-top: 0.75em;
+      padding-bottom: 0.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1.25em;
+    }
+    
+    .Block_description {
+      display: block;
+      padding-top: 0.75em;
+      padding-bottom: 0.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1.25em;
+    }
+
+    .BlockInner__Link {
+      display: block;
+      padding-top: 0.75em;
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+      line-height: 1.25em;
+      text-decoration: underline;
+    }
+
+    .BlockInner__Text p {
+      margin: 0.5em 0;
+      max-width: 600px;
+    }
+    
+    .BlockInner__Channel {
+      border: 1px solid green;
+      padding: 1em 0.5em;
+      font-weight: bold;
+      color: green;
+      display: block;
+      text-decoration: none;
+    }
+    
+    .Block iframe{
+      max-width: 100%;
+    }
+    
+  </style>
 </head>
 
-
-
-<body>
-</body>
-
-
+<body></body>
 
 <script type="module">  
   window.addEventListener("load", () => {
@@ -30,7 +150,7 @@
 
     function renderChannel(slug) {
       // Add a loading message
-      let loading = `L o a d i n g . . . `;
+      let loading = `Wait one second...`;
       document.body.innerHTML = loading;      
 
       let contentsURL = `https://api.are.na/v2/channels/${slug}?sort=position&order=asc&per=100`;
@@ -50,18 +170,10 @@
 
           // Replace the inner html of our document with our own mixture of HTML and channel data
           document.body.innerHTML = `
-
-              <br>
-    <h1 class="page-title">P U B L I C L Y &nbsp;&nbsp;S P A C E D &nbsp;&nbsp;: &nbsp;&nbsp;A &nbsp;&nbsp;P r i m e r &nbsp;&nbsp;o n &nbsp;&nbsp;o u r &nbsp;&nbsp;C o m m o n s</h1>
-
-<div class=nav-wrapper>
-    <h1 class="page-subtitle-nav"><a href="index.html">H o m e</a></h1>
-    <h1 class="page-subtitle-nav"><a href="#">C o l l e c t i o n</a></h1>
-    <h1 class="page-subtitle-nav"><a href="reflections.html">R e f l e c t i o n s</a></h1>
-    <h1 class="page-subtitle-nav"><a href="library.html">L i b r a r y</a></h1>
-</div>
-
-    <br><br><br>
+            <div class="ChannelInfo">
+              <h1>${channel.title}</h1><br>
+              <p class="subtitle">A Primer on Public Space</p>
+            </div>
 
             <div class="ChannelContents">
               ${channel.contents.map((block) => {
@@ -152,5 +264,4 @@
   });
 
 </script>
-
 </html>
