@@ -1,6 +1,6 @@
 body,
 html {
-margin-left: 15px;
+background-color: GhostWhite;
 }
 
 
@@ -36,12 +36,53 @@ margin-bottom: 1.75em;
 font-size: 1.6em;
 line-height: 1.3em;}
 
+.page-title { 
+display: block;
+color:rgb(23, 172, 16);
+text-align:center;
+font-weight: bold;
+font-family: "Tiny Grotesk Narrow", sans-serif;
+margin-left: 0 auto 1.75em auto; 
+font-size: 1.6em;
+line-height: 1.3em;}
+
 h2{ 
 font-family: "Tiny Grotesk Narrow", sans-serif;
+color:rgb(23, 172, 16);
 margin-left: 1.6em; 
 font-size: 1.6em;
 line-height: 1.3em;
 text-decoration: underline;}
+
+
+.rotate-wrapper{ 
+
+width: 80%;
+margin:0 auto 2em auto;
+perspective: 1000px;
+}
+
+.rotate{ 
+margin-bottom: 1.75em;
+transform-style: preserve-3d;
+transform: rotateX(45deg);
+transition: .5s;
+font-family: "Tiny Grotesk", sans-serif;
+font-size: 1.3em;
+line-height: 1.3em;
+color: DarkSlateGrey;}
+
+.rotate:hover { 
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);}
+
+iframe{ 
+display: block;
+margin: 0 auto 2em auto;}
+
+img{ 
+display: block;
+margin: 0 auto 0em auto;}
 
 p{ 
 font-family: "Tiny Grotesk", sans-serif;
@@ -63,11 +104,11 @@ font-family: "Tiny Grotesk", sans-serif;
 font-size: 1em;
 line-height: 1em;
 text-decoration: underline;
-color: black;}
+color: DarkSlateGrey;}
 
 a:hover{ 
 font-family: "Tiny Grotesk", sans-serif;
 font-size: 1em;
 line-height: 1em;
-text-decoration: none;
+text-decoration: underline;
 color: black;}
