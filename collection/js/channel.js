@@ -1,0 +1,120 @@
+
+  window.addEventListener("load", () => {
+    // Replace this with your channel slug 
+    // (i.e. in https://www.are.na/mike-tully/publicly-spaced)
+    let channelSlug = 'publicly-spaced';
+
+    function renderChannel(slug) {
+      // Add a loading message
+      let loading = `L o a d i n g . . . `;
+      document.body.innerHTML = loading;      
+
+      let contentsURL = `https://api.are.na/v2/channels/${slug}?sort=position&order=asc&per=100`;
+
+      // Fetch the channel data from the Are.na API
+      fetch(contentsURL)
+        // Grab the response in JSON
+        .then(response => response.json())
+
+        // Now we can turn channel data into content by mixing it with HTML
+        .then((channel) => {
+        
+          channel.contents.reverse();
+          
+          // Set the title of the page      
+          document.title = channel.title;
+
+          // Replace the inner html of our document with our own mixture of HTML and channel data
+          document.body.innerHTML = `
+            <div class="ChannelInfo">
+              <h1>${channel.title}</h1><br>
+              <p class="subtitle">A Primer on Public Space</p>
+            </div>
+
+            <div class="ChannelContents">
+              ${channel.contents.map((block) => {
+                // Loop through the contents of the channel.
+                // Each block will be an object.
+
+                // An example block:
+                // 
+                // {
+                //   "id": 76969,
+                //   "title": "The Working Sheepdog ( Border Collies ) in training",
+                //   "updated_at": "2020-04-07T21:59:29.806Z",
+                //   "created_at": "2013-02-12T22:40:15.696Z",
+                //   "state": "available",
+                //   "comment_count": 0,
+                //   "generated_title": "The Working Sheepdog ( Border Collies ) in training",
+                //   "content_html": "",
+                //   "description_html": "<p>Border Collie Collies working sheepdog Sheep dogs in training Scotland</p>",
+                //   "visibility": "public",
+                //   "content": "",
+                //   "description": "Border Collie Collies working sheepdog Sheep dogs in training Scotland",
+                //   "source": {},
+                //   "image": {},
+                //   "embed": {},
+                //   "attachment": null,
+                //   "metadata": null,
+                //   "base_class": "Block",
+                //   "class": "Media",
+                //   "user": {},
+                //   "position": 1,
+                //   "selected": false,
+                //   "connection_id": 716562,
+                //   "connected_at": "2016-05-16T00:59:42.901Z",
+                //   "connected_by_user_id": 128,
+                //   "connected_by_username": "Chris Sherrón",
+                //   "connected_by_user_slug": "chris-sherron"
+                // },
+
+                // Return HTML for each block, mixed in with the data from the block.
+                return `
+                  <div class="Block ${block.class}">
+
+                    ${(() => {
+                      if (block.title && block.class !== 'Channel') {
+                        return `<h1 class="Block__title">${block.title}</h1>`;
+                      }
+
+                      return ``;
+                    })()}
+                    
+                    <div><p class="Block_description">${block.description}</p></div>
+
+                    ${(() => {
+                      // Handle each block depending on what type of block it is (i.e. Image, Text, etc)
+                      switch (block.class) {
+                        case "Image":
+                          return `
+                            <img
+                              class="BlockInner__Image"
+                              src="${block.image.large.url}"
+                            />
+                        `;
+                        case "Text":
+                          return `<div class="BlockInner__Text">${block.content_html}</div>`;
+                        case "Attachment":
+                        case "Link":
+                          return `<a href="${block.source && block.source.url}" class="BlockInner__Link">Link: ${block.title}</a>`;
+                        case "Media":
+                          return `<div class="BlockInner__Media">${block.embed.html}</div>`;
+                        case "Channel":
+                          return `<a href="#/channel/${block.slug}" class="BlockInner__Channel" data-navigo>${block.title}</a>`;
+                      }
+                    })()}
+                  </div>
+                `;
+              }).join("")}
+            </div>
+          `
+        })
+      }
+
+    // This will handle our routes
+    const router = new Navigo("/", { hash: true });
+    router
+      .on("/channel/:slug", (match) => { renderChannel(match.data.slug) })
+      .on(() => { renderChannel(channelSlug) })
+      .resolve();
+  });
