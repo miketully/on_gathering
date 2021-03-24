@@ -132,7 +132,7 @@
     const router = new Navigo("/", { hash: true });
     router
       .on("/channel/:slug", (match) => { renderChannel(match.data.slug) })
-      .on(() => { renderChannel(channelSlug) })
+      .on("*", () => { renderChannel(channelSlug) })
       .resolve();
   });
 
