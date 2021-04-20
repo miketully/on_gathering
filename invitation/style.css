@@ -1,0 +1,103 @@
+/* CSS files add styling rules to your content */
+
+@font-face {
+  font-family: "Tiny Grotesk Narrow";
+  src:  url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.woff") format("woff"),
+      url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-NarrowRegular.otf") format("opentype");}
+
+@font-face {
+  font-family: "Tiny Grotesk";
+  src:  url("https://mike-tully.github.io/on_gathering/css/fonts/TinyGrotesk-Regular.woff") format("woff"),}
+
+body {
+  font-family: "Tiny Grotesk Narrow", sans-serif;
+  text-align: left;
+  margin: 2em;
+  color: white;
+  background-color: GhostWhite;
+
+}
+
+::selection {
+  background: green;
+}
+
+.hover07 {
+  -webkit-filter: blur(30px);
+  filter: blur(30px);
+  -webkit-transition: .9s ease-in-out;
+  transition: .9s ease-in-out;
+}
+.hover07:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+img {
+  margin-top:100px;
+}
+
+h1 {
+  font-style: bold;
+  color: white;
+}
+
+h2 {
+  font-style: bold;
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  color:rgb(23, 172, 16);
+  text-align: center;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: .15em;
+  width: 800px;
+}
+
+p.citation {
+  font-family: "Merriweather", times, serif;
+  font-size: 14px;
+  line-height: 24px;
+  width: 640px;
+  padding: 20px;
+  padding-left: 80px;
+}
+
+p.caption {
+  font-family: "Rubik", sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  width: 800px;
+}
+
+h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+h2 a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color:rgb(23, 172, 16);
+}
+
+a:visited {
+  color:rgb(23, 172, 16);
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  color:rgb(23, 172, 16);
+}
