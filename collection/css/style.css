@@ -339,7 +339,7 @@ img{
 .Block {
 	display: flex;
 	margin: 0em auto;
-	max-width: 20em;
+	width: 10em;
 	padding: 0em;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: bold;
