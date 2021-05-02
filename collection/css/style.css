@@ -346,6 +346,7 @@ img{
 	font-size: 1em;}
 
 .Block__title {
+	display: block;
 	padding: 0em;
 	margin: 0em;
 	font-family: "Tiny Grotesk", sans-serif;
@@ -355,6 +356,7 @@ img{
 	text-transform: uppercase;}
 
 .Block_connected-at {
+	display: block;
 	padding: 0;
 	margin: 0;
 	font-family: "Tiny Grotesk", sans-serif;
@@ -363,6 +365,7 @@ img{
 	line-height: 1.25em;}
 
 .Block_description {
+	display: block;
 	padding: 0;
 	margin: 0;
 	font-family: "Tiny Grotesk", sans-serif;
@@ -380,11 +383,8 @@ img{
 	line-height: 1.25em;
 	text-decoration: underline;}
 
-.BlockInner__Text p {
-	margin: 0;
-	width: auto;}
-
 .BlockInner__Channel {
+	display: block;
 	border: 1px solid green;
 	padding: 1em 0.5em;
 	font-weight: bold;
@@ -393,11 +393,13 @@ img{
 	text-decoration: none;}
 
 .Block iframe{
+	display: block;
 	max-width: 100%;
 	padding: 0;
 	margin: 0;}
 
 .Block p { 
+	display: block;
 	font-family: "Tiny Grotesk", sans-serif;
 	width: 100%;
 	margin: 0;
@@ -406,12 +408,14 @@ img{
 	line-height: 1em;}
 
 .BlockInner__Text p {
+	display: block;
+	width: auto;
 	margin: 0;
 	padding: 0;
-	width: 100%;
 }
 
 .BlockInner__Image {
+	display: block;
 	max-width: 400px;
 	padding: 0;
 	margin: 0;
@@ -419,6 +423,7 @@ img{
 
 
 .BlockInner__Media {
+	display: block;
 	max-width: 500px;
 }
 
