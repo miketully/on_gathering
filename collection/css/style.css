@@ -407,6 +407,9 @@ img{
 	width: 100%;
 }
 
+.BlockInner__Image {
+	max-width: 600px;
+}
 
 
 
