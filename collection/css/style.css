@@ -330,7 +330,7 @@ img{
     
 .ChannelContents {
 	display: flex;
-	flex-wrap: wrap-reverse;
+	flex-wrap: wrap;
 	width: 100%;
 	padding: 0em;
 	margin: 0 auto;
