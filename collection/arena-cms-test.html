@@ -115,7 +115,7 @@
                       return ``;
                     })()}
                     
-                    <div><p class="Block_description">${block.description}</p></div>
+                    <p class="Block_description">${block.description}</p>
 
                     ${(() => {
                       // Handle each block depending on what type of block it is (i.e. Image, Text, etc)
@@ -128,7 +128,7 @@
                             />
                         `;
                         case "Text":
-                          return `<div class="BlockInner__Text">${block.content_html}</div>`;
+                          return `<p class="BlockInner__Text">${block.content_html}</p>`;
                         case "Attachment":
                         case "Link":
                           return `<a href="${block.source && block.source.url}" class="BlockInner__Link">Link: ${block.title}</a>`;
