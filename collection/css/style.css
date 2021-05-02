@@ -339,8 +339,11 @@ img{
 .Block {
 	display: flex;
 	margin: 0em auto;
-	max-width: 10em;
-	padding: 1em;}
+	max-width: 20em;
+	padding: 1em;
+	font-family: "Tiny Grotesk", sans-serif;
+	font-weight: bold;
+	font-size: 1em;}
 
 .Block__title {
 	display: block;
@@ -382,7 +385,7 @@ img{
 
 .BlockInner__Text p {
 	margin: 0.5em 0;
-	max-width: 600px;}
+	max-width: 300px;}
 
 .BlockInner__Channel {
 	border: 1px solid green;

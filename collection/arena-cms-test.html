@@ -23,7 +23,7 @@
 
     function renderChannel(slug) {
       // Add a loading message
-      let loading = `Wait one second...`;
+      let loading = `Loading...`;
       document.body.innerHTML = loading;      
 
       let contentsURL = `https://api.are.na/v2/channels/${slug}?sort=position&order=asc&per=100`;
