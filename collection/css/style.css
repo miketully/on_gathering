@@ -398,6 +398,13 @@ img{
 .Block iframe{
 	max-width: 100%;}
 
+.Block p { 
+	font-family: "Tiny Grotesk", sans-serif;
+	width: 100%;
+	margin: 0;
+	font-size: 1.3em;
+	line-height: 1.3em;}
+
 
 
 
