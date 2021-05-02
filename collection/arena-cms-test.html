@@ -114,11 +114,13 @@
 
                       return ``;
                     })()}
-                    
+                    <br>
                     <p class="Block_description">${block.description}</p>
-
+                    <br>
                     ${(() => {
+
                       // Handle each block depending on what type of block it is (i.e. Image, Text, etc)
+                      
                       switch (block.class) {
                         case "Image":
                           return `
