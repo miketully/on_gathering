@@ -427,4 +427,21 @@ img{
 	max-width: 500px;
 }
 
+.BlockInner__Link a {
+	display: block;
+	color: rgb(23, 172, 16);
+	font-family: "Tiny Grotesk", sans-serif;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.25em;
+}
+
+.BlockInner__Link a:hover {
+	display: block;
+	color: rgb(23, 172, 16);
+	font-family: "Tiny Grotesk", sans-serif;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.25em;
+}
 
