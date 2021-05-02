@@ -346,7 +346,8 @@ img{
 	font-size: 1em;}
 
 .Block__title {
-	padding-bottom: 0.5em;
+	padding: 0em;
+	margin: 0em;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: bold;
 	font-size: 1em;
