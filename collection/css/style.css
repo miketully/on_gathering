@@ -402,8 +402,13 @@ img{
 	font-family: "Tiny Grotesk", sans-serif;
 	width: 100%;
 	margin: 0;
-	font-size: 1.3em;
-	line-height: 1.3em;}
+	font-size: 1em;
+	line-height: 1em;}
+
+.BlockInner__Text p {
+	margin: 0;
+	width: 100%;
+}
 
 
 
