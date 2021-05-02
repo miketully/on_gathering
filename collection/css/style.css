@@ -340,7 +340,7 @@ img{
 	display: flex;
 	margin: 0em auto;
 	max-width: 20em;
-	padding: 1em;
+	padding: 0em;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: bold;
 	font-size: 1em;}
@@ -384,7 +384,7 @@ img{
 	text-decoration: underline;}
 
 .BlockInner__Text p {
-	margin: 0.5em 0;
+	margin: 0;
 	max-width: 300px;}
 
 .BlockInner__Channel {
