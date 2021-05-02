@@ -412,12 +412,14 @@ img{
 }
 
 .BlockInner__Image {
-	max-width: 600px;
+	max-width: 400px;
 	padding: 0;
 	margin: 0;
 }
 
 
-
+.BlockInner__Media {
+	max-width: 500px;
+}
 
 
