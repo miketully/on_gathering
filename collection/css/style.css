@@ -373,6 +373,21 @@ img{
 	font-size: 1em;
 	line-height: 1.25em;}
 
+.Block iframe{
+	display: block;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;}
+
+.Block p { 
+	display: block;
+	font-family: "Tiny Grotesk", sans-serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1em;}
+
 .BlockInner__Link {
 	display: block;
 	padding: 0;
@@ -392,21 +407,6 @@ img{
 	display: block;
 	text-decoration: none;}
 
-.Block iframe{
-	display: block;
-	max-width: 100%;
-	padding: 0;
-	margin: 0;}
-
-.Block p { 
-	display: block;
-	font-family: "Tiny Grotesk", sans-serif;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-	line-height: 1em;}
-
 .BlockInner__Text p {
 	display: block;
 	width: auto;
@@ -421,13 +421,12 @@ img{
 	margin: 0;
 }
 
-
 .BlockInner__Media {
 	display: block;
 	max-width: 500px;
 }
 
-.BlockInner__Link a {
+a.BlockInner__Link {
 	display: block;
 	color: rgb(23, 172, 16);
 	font-family: "Tiny Grotesk", sans-serif;
@@ -436,7 +435,7 @@ img{
 	line-height: 1.25em;
 }
 
-.BlockInner__Link a:hover {
+a.BlockInner__Link:hover {
 	display: block;
 	color: rgb(23, 172, 16);
 	font-family: "Tiny Grotesk", sans-serif;
