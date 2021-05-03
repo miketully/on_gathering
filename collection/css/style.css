@@ -330,28 +330,50 @@ img{
 .Block {
 	/*display: flex;*/
 	margin: 0em auto;
+	transform-style: preserve-3d;
+	transform: rotateY(-10deg);
+	transition: .5s;
 	max-width: 30%;
 	height: 100%;
 	padding: 1em;
+	margin-bottom:2em;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: normal;
 	font-size: 1em;
 	line-height: 2em;}
 
+
+.Block:hover {
+		/*display: flex;*/
+		margin: 0em auto;
+		transform-style: preserve-3d;
+		transform: rotateX(0deg);
+		max-width: 30%;
+		height: 100%;
+		padding: 1em;
+		margin-bottom:2em;
+		font-family: "Tiny Grotesk", sans-serif;
+		font-weight: normal;
+		font-size: 1em;
+		line-height: 2em;}
+
 .Block__title {
 	display: block;
 	padding-bottom: .375em;
 	margin: 0em;
-	font-family: "Tiny Grotesk", sans-serif;
+	color: DarkSlateGrey;
+	font-family: "Tiny Grotesk Narrow", sans-serif;
 	font-weight: bold;
 	font-size: 1em;
 	line-height: 1em;
+	letter-spacing: .125em;
 	text-transform: uppercase;}
 
 .Block_connected-at {
 	display: block;
 	padding: 0;
 	margin: 0;
+	color: DarkSlateGrey;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: normal;
 	font-size: 1em;
@@ -361,6 +383,7 @@ img{
 	display: block;
 	padding: 0;
 	margin: 0;
+	color: DarkSlateGrey;
 	font-family: "Tiny Grotesk", sans-serif;
 	font-weight: normal;
 	font-size: 1em;
@@ -375,6 +398,7 @@ img{
 
 .Block p { 
 	display: block;
+	color: DarkSlateGrey;
 	font-family: "Tiny Grotesk", sans-serif;
 	width: 100%;
 	margin: 0;
