@@ -115,7 +115,7 @@
                       return ``;
                     })()}
                     
-                    <p class="Block_description">${block.description}</p>
+                    <p class="Block_description">${"undefined" ?"": block.description}</p>
                     
                     ${(() => {
 
@@ -133,7 +133,7 @@
                           return `<p class="BlockInner__Text">${block.content_html}</p>`;
                         case "Attachment":
                         case "Link":
-                          return `<a href="${block.source && block.source.url}" class="BlockInner__Link">Link: ${block.title}</a>`;
+                          return `<a href="${block.source && block.source.url}" class="BlockInner__Link">${block.title}</a>`;
                         case "Media":
                           return `<div class="BlockInner__Media">${block.embed.html}</div>`;
                         case "Channel":
