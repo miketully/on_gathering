@@ -91,12 +91,11 @@ h1{
 .page-subtitle-nav-active { 
 	display: inline-block;
 	color:rgb(23, 172, 16)
-	padding-left: .75em;
-	padding-right: .75em;
+	padding: .5em 1em .5em 1em;
 	text-align:center;
 	font-weight: bold;
 	font-family: "Tiny Grotesk Narrow", sans-serif;
-	margin: 0 auto 0 auto; 
+	margin: 0 .75em 0 .75em; 
 	font-size: 1.2em;
 	line-height: 1em;}
 
@@ -116,6 +115,7 @@ h1{
 
 .page-subtitle-nav-active a:hover{ 
 	display: block;
+	padding: .5em 1em .5em 1em;
 	background-color:rgb(23, 172, 16);
 	color:white;
 	text-align:center;
