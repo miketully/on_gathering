@@ -51,6 +51,18 @@ h1{
 	margin: 0em auto; 
 	text-align:center;}
 
+.nav-wrapper-collection { 
+	position: fixed;
+	margin-top: 0em;
+	margin-left: 1em; 
+	text-align:left;}
+
+.nav-wrapper-collection-right { 
+	position: fixed;
+	margin-top: 0em;
+	right: 1em; 
+	text-align:right;}
+
 .page-subtitle-nav { 
 	display: inline-block;
 	color:rgb(23, 172, 16);
@@ -210,9 +222,7 @@ h1{
 	border-radius:1em;
 	text-transform: uppercase;}
 
-
-
-
+	
 
 /* ---   Page Text Styles + Link Styles   --- */
 
