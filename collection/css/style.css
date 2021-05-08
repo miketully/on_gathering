@@ -273,6 +273,12 @@ a:hover {
 	margin:0 auto 2em auto;
 	perspective: 1000px;}
 
+.rotate-wrapper-center{ 
+	width: 80%;
+	margin:0 auto 2em auto;
+	perspective: 1000px;
+	text-align: center;}
+
 .non-rotate{ 
 	margin-bottom: 1.75em;
 	font-family: "Tiny Grotesk", sans-serif;
