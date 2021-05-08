@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8"> 
+    <title>Publicly Spaced – Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta name="description" content="<i>Publicly Spaced: Navigating Shared Spaces</i> is a collection of materials relating to public spaces for the Yale Spring '21 course On Gathering by Mindy Seu.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--  This is for routing  -->
+    <script src="//unpkg.com/navigo"></script>
+</head>
+
+<body></body>
+
+<script type="module">  
+  window.addEventListener("load", () => {
+    // Replace this with your channel slug 
+    // (i.e. in https://www.are.na/mike-tully/publicly-spaced)
+    let channelSlug = 'publicly-spaced-one-by-one';
+
+    function renderChannel(slug) {
+      // Add a loading message
+      let loading = `Loading...`;
+      document.body.innerHTML = loading;      
+
+      let contentsURL = `https://api.are.na/v2/channels/${slug}?sort=position&order=asc&per=100`;
+
+      // Fetch the channel data from the Are.na API
+      fetch(contentsURL)
+        // Grab the response in JSON
+        .then(response => response.json())
+
+        // Now we can turn channel data into content by mixing it with HTML
+        .then((channel) => {
+        
+          channel.contents.reverse();
+          
+          // Set the title of the page      
+          document.title = channel.title;
+
+          // Replace the inner html of our document with our own mixture of HTML and channel data
+          document.body.innerHTML = `
+      <br>
+    <h1 class="page-title">P U B L I C L Y &nbsp;&nbsp;S P A C E D &nbsp;&nbsp;: &nbsp;&nbsp;N a v i g a t i n g &nbsp;&nbsp;S h a r e d &nbsp;&nbsp;S p a c e s</h1>
+
+<div class=nav-wrapper>
+    <h1 class="page-subtitle-nav"><a href="index.html">H o m e</a></h1>
+    <h1 class="page-subtitle-nav"><a href="collection.html">C o l l e c t i o n</a></h1>
+    <h1 class="page-subtitle-nav"><a href="reflections.html">R e f l e c t i o n s</a></h1>
+    <h1 class="page-subtitle-nav"><a href="library.html">L i b r a r y</a></h1>
+    <h1 class="page-subtitle-nav"><a href="colophon.html">C o l o p h o n</a></h1>
+
+</div>
+
+    <br><br><br>
+
+
+            <div class="ChannelContents">
+              ${channel.contents.map((block) => {
+                // Loop through the contents of the channel.
+                // Each block will be an object.
+
+                // An example block:
+                // 
+                // {
+                //   "id": 76969,
+                //   "title": "The Working Sheepdog ( Border Collies ) in training",
+                //   "updated_at": "2020-04-07T21:59:29.806Z",
+                //   "created_at": "2013-02-12T22:40:15.696Z",
+                //   "state": "available",
+                //   "comment_count": 0,
+                //   "generated_title": "The Working Sheepdog ( Border Collies ) in training",
+                //   "content_html": "",
+                //   "description_html": "<p>Border Collie Collies working sheepdog Sheep dogs in training Scotland</p>",
+                //   "visibility": "public",
+                //   "content": "",
+                //   "description": "Border Collie Collies working sheepdog Sheep dogs in training Scotland",
+                //   "source": {},
+                //   "image": {},
+                //   "embed": {},
+                //   "attachment": null,
+                //   "metadata": null,
+                //   "base_class": "Block",
+                //   "class": "Media",
+                //   "user": {},
+                //   "position": 1,
+                //   "selected": false,
+                //   "connection_id": 716562,
+                //   "connected_at": "2016-05-16T00:59:42.901Z",
+                //   "connected_by_user_id": 128,
+                //   "connected_by_username": "Chris Sherrón",
+                //   "connected_by_user_slug": "chris-sherron"
+                // },
+
+                // Return HTML for each block, mixed in with the data from the block.
+                return `
+                  <div class="Block ${block.class}">
+
+                    ${(() => {
+                      if (block.title && block.class !== 'Channel') {
+                        return `<h1 class="Block__title">${block.title}</h1>`;
+                      }
+
+                      return ``;
+                    })()}
+                    
+                    <p class="Block_description">${"undefined" ?"": block.description}</p>
+                    
+                    ${(() => {
+
+                      // Handle each block depending on what type of block it is (i.e. Image, Text, etc)
+                      
+                      switch (block.class) {
+                        case "Image":
+                          return `
+                            <img
+                              class="BlockInner__Image"
+                              src="${block.image.large.url}"
+                            />
+                            <p class="Block_description">${"undefined" ?"": block.description}</p>
+                        `;
+                        case "Text":
+                          return `<p class="BlockInner__Text">${block.content_html}</p>`;
+                        case "Attachment":
+                        case "Link":
+                          return `<a href="${block.source && block.source.url}" class="BlockInner__Link" target="_blank">${block.title}</a>`;
+                        case "Media":
+                          return `<div class="BlockInner__Media">${block.embed.html}</div>`;
+                        case "Channel":
+                          return `<a href="#/channel/${block.slug}" class="BlockInner__Channel" data-navigo>${block.title}</a>`;
+                      }
+                    })()}
+                  </div>
+                `;
+              }).join("")}
+            </div>
+          `
+        })
+      }
+
+    // This will handle our routes
+    const router = new Navigo("/", { hash: true });
+    router
+      .on("/channel/:slug", (match) => { renderChannel(match.data.slug) })
+      .on("*", () => { renderChannel(channelSlug) })
+      .resolve();
+  });
+
+</script>
+</html>
