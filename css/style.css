@@ -156,3 +156,12 @@ font-size: 1em;
 line-height: 1em;
 text-decoration: underline;
 color: black;}
+
+.right
+{float: right; }
+
+.left
+{float: left; }
+
+
+
